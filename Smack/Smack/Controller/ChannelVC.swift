@@ -25,6 +25,9 @@ class ChannelVC: UIViewController {
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            //Show profile page
+        }
         performSegue(withIdentifier: TO_LOGIN, sender: nil)
     }
     
