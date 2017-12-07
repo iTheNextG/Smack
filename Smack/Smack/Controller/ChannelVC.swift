@@ -23,6 +23,10 @@ class ChannelVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    // this func is create due to the view might not be inistantiontes when the notification is send is case you closed the app
+    override func viewDidAppear(_ animated: Bool) {
+        setUpUserInfo()
+    }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
@@ -32,6 +36,9 @@ class ChannelVC: UIViewController {
     }
     
     @objc func userDataDidChange(_ notif: Notification) {
+        setUpUserInfo()
+    }
+    func setUpUserInfo() {
         if AuthService.instance.isLoggedIn {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarNAme)
