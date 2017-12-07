@@ -84,10 +84,14 @@ class AuthService {
 //
 //                }
                 guard let Data = response.data else { return }
-                let json = JSON(data: Data)
-                self.userEmail = json["user"].stringValue
-                self.authToken = json["token"].stringValue
-                
+                do{
+                    let json = try JSON(data: Data)
+                    self.userEmail = json["user"].stringValue
+                    self.authToken = json["token"].stringValue
+
+                }catch {
+                    debugPrint(error as Any)
+                }
                 self.isLoggedIn = true
                 completion(true)
             }else {
@@ -140,13 +144,20 @@ class AuthService {
     }
     // this method is created due to several useed for the user data
     func setUpUserData(data: Data) {
-        let json = JSON(data: data)
-        let id = json["_id"].stringValue
-        let color = json["avatarColor"].stringValue
-        let avatarName = json["avatarName"].stringValue
-        let email = json["email"].stringValue
-        let name = json["name"].stringValue
-        UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+        do {
+            let json = try JSON(data: data)
+            let id = json["_id"].stringValue
+            let color = json["avatarColor"].stringValue
+            let avatarName = json["avatarName"].stringValue
+            let email = json["email"].stringValue
+            let name = json["name"].stringValue
+            UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+        }catch {
+            debugPrint(error as Any)
+        }
+        
+        
+        
     }
     
 }

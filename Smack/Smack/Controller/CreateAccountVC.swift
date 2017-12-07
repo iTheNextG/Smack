@@ -19,7 +19,7 @@ class CreateAccountVC: UIViewController {
     // Variables
     var avatarName = "profileDefault"
     var avatarColor = "[0.5, 0.5, 0.5, 1]"
-    var bgColor : UIColor
+    var bgColor : UIColor!
     
     
     override func viewDidLoad() {
