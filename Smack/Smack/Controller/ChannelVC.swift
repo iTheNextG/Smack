@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChannelVC: UIViewController, UIViewDelegate, UITableViewDataSource {
+class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var userImg: CircleImage!
@@ -28,6 +28,12 @@ class ChannelVC: UIViewController, UIViewDelegate, UITableViewDataSource {
     // this func is create due to the view might not be inistantiontes when the notification is send is case you closed the app
     override func viewDidAppear(_ animated: Bool) {
         setUpUserInfo()
+    }
+    @IBAction func addChannelPressed(_ sender: Any) {
+        let addChannel = addChannelVC()
+        addChannel.modalPresentationStyle = .custom
+        present(addChannel, animated: true, completion: nil)
+        
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
@@ -62,7 +68,7 @@ class ChannelVC: UIViewController, UIViewDelegate, UITableViewDataSource {
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,3 +76,23 @@ class ChannelVC: UIViewController, UIViewDelegate, UITableViewDataSource {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
