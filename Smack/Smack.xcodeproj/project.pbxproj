@@ -21,6 +21,7 @@
 		FF5731161FD96B7A00196853 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5731151FD96B7A00196853 /* ChannelCell.swift */; };
 		FF5731191FDAF88F00196853 /* addChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5731171FDAF88F00196853 /* addChannelVC.swift */; };
 		FF57311A1FDAF88F00196853 /* addChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF5731181FDAF88F00196853 /* addChannelVC.xib */; };
+		FF57311C1FDB0A1300196853 /* socketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57311B1FDB0A1300196853 /* socketService.swift */; };
 		FF8C5FA61FC4162C00DEC7E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8C5FA51FC4162C00DEC7E1 /* AppDelegate.swift */; };
 		FF8C5FAB1FC4162C00DEC7E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8C5FA91FC4162C00DEC7E1 /* Main.storyboard */; };
 		FF8C5FAD1FC4162C00DEC7E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8C5FAC1FC4162C00DEC7E1 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		FF5731151FD96B7A00196853 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		FF5731171FDAF88F00196853 /* addChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addChannelVC.swift; sourceTree = "<group>"; };
 		FF5731181FDAF88F00196853 /* addChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addChannelVC.xib; sourceTree = "<group>"; };
+		FF57311B1FDB0A1300196853 /* socketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socketService.swift; sourceTree = "<group>"; };
 		FF8C5FA21FC4162C00DEC7E1 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8C5FA51FC4162C00DEC7E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF8C5FAA1FC4162C00DEC7E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				FF1E7D451FCB5F1C00FF1D22 /* AuthService.swift */,
 				FF5486A71FD5A5E4001F3ECC /* UserDataService.swift */,
 				FF5731111FD9310500196853 /* MessageService.swift */,
+				FF57311B1FDB0A1300196853 /* socketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				FF8C5FC91FC440C700DEC7E1 /* LoginVC.swift in Sources */,
 				FF8C5FC41FC4274500DEC7E1 /* GradientView.swift in Sources */,
 				FF5731091FD6B24D00196853 /* AvatarCell.swift in Sources */,
+				FF57311C1FDB0A1300196853 /* socketService.swift in Sources */,
 				FF8C5FA61FC4162C00DEC7E1 /* AppDelegate.swift in Sources */,
 				FF8C5FBB1FC4184500DEC7E1 /* SWRevealViewController.m in Sources */,
 				FF8C5FC71FC43B0200DEC7E1 /* Constants.swift in Sources */,
